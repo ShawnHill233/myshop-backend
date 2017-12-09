@@ -1,3 +1,16 @@
+GIT
+  remote: https://github.com/spree-contrib/spree_i18n.git
+  revision: 94cc97195c166ebf103bdb117ad9b0225dc02027
+  branch: master
+  specs:
+    spree_i18n (3.3.2)
+      i18n_data
+      kaminari-i18n
+      rails-i18n
+      routing-filter
+      spree_core (>= 3.1.0, < 4.0)
+      spree_extension
+
 GEM
   remote: http://gems.ruby-china.org/
   specs:
@@ -116,6 +129,7 @@ GEM
     htmlentities (4.3.4)
     i18n (0.9.1)
       concurrent-ruby (~> 1.0)
+    i18n_data (0.8.0)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -137,6 +151,9 @@ GEM
       activerecord
       kaminari-core (= 1.0.1)
     kaminari-core (1.0.1)
+    kaminari-i18n (0.4.0)
+      kaminari
+      rails
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -205,6 +222,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails-i18n (5.0.4)
+      i18n (~> 0.7)
+      railties (~> 5.0)
     railties (5.1.4)
       actionpack (= 5.1.4)
       activesupport (= 5.1.4)
@@ -225,6 +245,9 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
+    routing-filter (0.6.1)
+      actionpack (>= 4.2, < 5.2)
+      activesupport (>= 4.2, < 5.2)
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
     sass (3.5.3)
@@ -373,6 +396,7 @@ DEPENDENCIES
   spree (~> 3.4.0)
   spree_auth_devise (~> 3.3)
   spree_gateway (~> 3.3)
+  spree_i18n!
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
