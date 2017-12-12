@@ -37,6 +37,8 @@ gem 'spree_auth_devise', '~> 3.3'
 gem 'spree_gateway', '~> 3.3'
 gem 'spree_i18n', github: 'spree-contrib/spree_i18n', branch: 'master'
 
+#Extensions
+gem 'spree_banner', path: 'vendor/extensions/spree_banner'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

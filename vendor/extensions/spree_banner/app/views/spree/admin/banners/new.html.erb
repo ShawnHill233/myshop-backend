@@ -1,0 +1,43 @@
+<% content_for :page_title do %>
+  <%= "轮播图片 / 新建图片" %>
+<% end %>
+
+
+<%= form_for [:admin, @banner], html: { multipart: true } do |f| %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h1 class="panel-title">
+        <%= '轮播图片信息' %>
+      </h1>
+    </div>
+    <div class="panel-body">
+      <div class="form-group">
+        <div class="col-xs-12 col-md-12">
+          <div data-hook="admin_image_form_fields" class="row">
+            <div class="col-xs-12 col-md-6">
+              <div class="form-group">
+                <%= file_field_tag :attachment %>
+              </div>
+
+              <div class="form-group">
+                <%= f.label :product_id, '商品id' %>
+                <%= f.text_field :product_id %>
+              </div>
+              <div class="form-group">
+                <%= f.label :site, '位置' %>
+                <%= f.select :site, [['1st', '1st'], ['2st', '2st'], ['3st', '3st'], ['4st', '4st'], ['5st', '5st']] %>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="form-actions" data-hook="buttons">
+          <%= button Spree.t('actions.new'), 'save' %>
+          <span class="or"><%= Spree.t(:or) %></span>
+          <%= button_link_to Spree.t('actions.cancel'), '', id: 'cancel_link', icon: 'delete' %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

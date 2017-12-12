@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171209090525) do
+ActiveRecord::Schema.define(version: 20171211142558) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
@@ -84,6 +84,12 @@ ActiveRecord::Schema.define(version: 20171209090525) do
     t.index ["position"], name: "index_spree_assets_on_position"
     t.index ["viewable_id"], name: "index_assets_on_viewable_id"
     t.index ["viewable_type", "type"], name: "index_assets_on_viewable_type_and_type"
+  end
+
+  create_table "spree_banners", force: :cascade do |t|
+    t.string "site"
+    t.integer "product_id"
+    t.index ["product_id"], name: "index_spree_banners_on_product_id"
   end
 
   create_table "spree_calculators", force: :cascade do |t|

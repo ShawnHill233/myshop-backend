@@ -11,6 +11,13 @@ GIT
       spree_core (>= 3.1.0, < 4.0)
       spree_extension
 
+PATH
+  remote: vendor/extensions/spree_banner
+  specs:
+    spree_banner (0.0.1.alpha)
+      spree_core (>= 3.1.0, < 4.0)
+      spree_extension
+
 GEM
   remote: http://gems.ruby-china.org/
   specs:
@@ -395,6 +402,7 @@ DEPENDENCIES
   selenium-webdriver
   spree (~> 3.4.0)
   spree_auth_devise (~> 3.3)
+  spree_banner!
   spree_gateway (~> 3.3)
   spree_i18n!
   spring
