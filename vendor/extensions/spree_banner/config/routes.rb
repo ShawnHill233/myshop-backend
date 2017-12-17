@@ -9,6 +9,7 @@ Spree::Core::Engine.add_routes do
       namespace :v1 do
         resources :index, only: [:index]
         resources :banners, only: [:index]
+        resources :brands, only: [:show]
       end
     end
   end
