@@ -10,6 +10,11 @@ Spree::Core::Engine.add_routes do
         resources :index, only: [:index]
         resources :banners, only: [:index]
         resources :brands, only: [:show]
+        resources :carts do
+          collection do
+            get 'populate'
+          end
+        end
       end
     end
   end
